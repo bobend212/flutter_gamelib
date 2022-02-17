@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gamelib_app/categories_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -7,28 +8,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Games Library',
-      theme: ThemeData.dark(),
-      home: MyHomePage(),
+      theme: ThemeData(brightness: Brightness.dark, fontFamily: 'Lora'),
+      home: CategoriesScreen(),
       debugShowCheckedModeBanner: false,
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  @override
-  _MyHomePageState createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Games Library'),
-      ),
-      body: Center(
-        child: Text('Navigation Time!'),
-      ),
     );
   }
 }
