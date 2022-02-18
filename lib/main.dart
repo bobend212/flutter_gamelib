@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:gamelib_app/categories_screen.dart';
+import 'package:gamelib_app/screens/categories_screen.dart';
+import 'package:gamelib_app/screens/category_games_screen.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   @override
@@ -11,6 +14,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(brightness: Brightness.dark, fontFamily: 'Lora'),
       home: CategoriesScreen(),
       debugShowCheckedModeBanner: false,
+      routes: {
+        CategoryGamesScreen.routeName: (ctx) => CategoryGamesScreen(),
+      },
     );
   }
 }

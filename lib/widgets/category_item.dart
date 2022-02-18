@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:gamelib_app/category_games_screen.dart';
+import 'package:gamelib_app/screens/category_games_screen.dart';
 
 class CategoryItem extends StatelessWidget {
   final String id;
@@ -11,12 +11,8 @@ class CategoryItem extends StatelessWidget {
   CategoryItem(this.id, this.title, this.color);
 
   void selectCategory(BuildContext ctx) {
-    Navigator.of(ctx).push(MaterialPageRoute(builder: (_) {
-      return CategoryGamesScreen(
-        categoryId: id,
-        categoryTitle: title,
-      );
-    }));
+    Navigator.of(ctx).pushNamed(CategoryGamesScreen.routeName,
+        arguments: {'id': id, 'title': title});
   }
 
   @override
