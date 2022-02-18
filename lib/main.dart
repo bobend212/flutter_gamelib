@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:gamelib_app/screens/categories_screen.dart';
 import 'package:gamelib_app/screens/category_games_screen.dart';
+import 'package:gamelib_app/screens/game_detail_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -16,6 +17,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       routes: {
         CategoryGamesScreen.routeName: (ctx) => CategoryGamesScreen(),
+        GameDetailScreen.routeName: (ctx) => GameDetailScreen(),
       },
     );
   }

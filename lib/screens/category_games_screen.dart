@@ -27,6 +27,7 @@ class CategoryGamesScreen extends StatelessWidget {
       body: ListView.builder(
         itemBuilder: (ctx, index) {
           return GameItem(
+              id: categoryGames[index].id,
               title: categoryGames[index].title,
               imageUrl: categoryGames[index].imageUrl,
               releaseYear: categoryGames[index].releaseYear,

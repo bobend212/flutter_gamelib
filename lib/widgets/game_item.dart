@@ -2,15 +2,18 @@
 
 import 'package:flutter/material.dart';
 import 'package:gamelib_app/models/game.dart';
+import 'package:gamelib_app/screens/game_detail_screen.dart';
 
 class GameItem extends StatelessWidget {
+  final String id;
   final String title;
   final String imageUrl;
   final int releaseYear;
   final Status status;
 
   const GameItem(
-      {required this.title,
+      {required this.id,
+      required this.title,
       required this.imageUrl,
       required this.releaseYear,
       required this.status});
@@ -30,12 +33,14 @@ class GameItem extends StatelessWidget {
     }
   }
 
-  void selectGame() {}
+  void selectGame(BuildContext context) {
+    Navigator.of(context).pushNamed(GameDetailScreen.routeName, arguments: id);
+  }
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: selectGame,
+      onTap: () => selectGame(context),
       child: Card(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
         elevation: 4,
