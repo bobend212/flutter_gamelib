@@ -21,7 +21,16 @@ const DUMMY_GAMES = const [
       title: 'title1',
       imageUrl:
           'https://static.posters.cz/image/750/plakaty/gears-of-war-4-game-cover-i30650.jpg',
-      tags: ['aa', 'bb'],
+      tags: [
+        'aa',
+        'bb',
+        'aa',
+        'bb',
+        'aa',
+        'bb',
+        'aa',
+        'bb',
+      ],
       releaseYear: 2005,
       status: Status.finished,
       isReleased: true,
